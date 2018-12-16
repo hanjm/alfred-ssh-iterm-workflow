@@ -13,3 +13,6 @@
 
 .idea
 ./build/alfred-open-ssh-host-with-iterm-badge-workflow
+
+.DS_Store
+build/.DS_Store
