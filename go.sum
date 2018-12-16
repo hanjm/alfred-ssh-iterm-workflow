@@ -1,0 +1,8 @@
+github.com/deanishe/awgo v0.15.0 h1:ExG+fHtI7gLRVOk0RPsniVl4ks4gpt6YkHSk3w1ABYs=
+github.com/deanishe/awgo v0.15.0/go.mod h1:iS04UkOlaot9B69n8pPeXb804n4vxgDGl3QjXybu4nM=
+github.com/hanjm/errors v0.0.0-20180908030140-d38fee708a13 h1:Beny2j+i78uj3h3ArLTT/sF5+WrDG+7brA9nQvgS3hA=
+github.com/hanjm/errors v0.0.0-20180908030140-d38fee708a13/go.mod h1:XzkUYPPR6q4Z75g75Zve2GrAPSIwqnLn8XNe0I0PFTg=
+github.com/hanjm/log v0.0.0-20170515143313-4d15f1aa0ad0 h1:+5zGKRqZJ/F372ppmOpb7oRyJreD+Y152WklLTHJzRY=
+github.com/hanjm/log v0.0.0-20170515143313-4d15f1aa0ad0/go.mod h1:u5OH3SJb0EcAVUghps8moTRseG3Ugrpld73cuyvNQi8=
+golang.org/x/text v0.3.0 h1:g61tztE5qeGQ89tm6NTjjM9VPIm088od1l6aSorWRWg=
+golang.org/x/text v0.3.0/go.mod h1:NqM8EUOU14njkJ3fqMW+pc6Ldnwhi/IjpwHt7yyuwOQ=
