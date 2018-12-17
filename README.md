@@ -1,5 +1,5 @@
 # alfred-ssh-iterm-workflow
-Query and open ssh host with iTerm badge
+Query `~/.ssh/config` and open ssh host with iTerm badge
 
 ## Workflow
 
