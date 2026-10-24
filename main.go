@@ -1,8 +1,6 @@
 package main
 
 import (
-	"encoding/base64"
-	"fmt"
 	"github.com/deanishe/awgo"
 	"github.com/hanjm/errors"
 	"github.com/hanjm/log"
@@ -10,7 +8,7 @@ import (
 	"strings"
 )
 
-var wf = aw.New()
+var wf *aw.Workflow
 
 func run() {
 	// # 解析命令行参数
@@ -39,11 +37,11 @@ func run() {
 	log.Infof("hosts:%+v, query:%s", hosts, query)
 	for _, v := range hosts {
 		if strings.Contains(v, query) {
-			// 设置变量的命令来自于 https://iterm2.com/shell_integration/zsh, 参考: https://www.iterm2.com/documentation-shell-integration.html
-			userVarValue := base64.StdEncoding.EncodeToString([]byte(v))
-			cmd := fmt.Sprintf(`echo "\033]1337;SetUserVar=%s=%s\007";clear;ssh %s`, userVarKey, userVarValue, v)
-			// 用换行符来传递多个参数到 apple script
-			arg := strings.Join([]string{iTermProfileName, cmd}, "\n")
+			arg, err := sshWorkflowArg(iTermProfileName, v, userVarKey)
+			if err != nil {
+				wf.FatalError(err)
+				return
+			}
 			wf.NewItem(v).Arg(arg).Valid(true)
 		}
 	}
@@ -51,5 +49,6 @@ func run() {
 }
 
 func main() {
+	wf = aw.New()
 	wf.Run(run)
 }
